@@ -5,3 +5,18 @@ clusterGroup:
       testAccount:
         name: test
         namespace: default
+    roles:
+      view-secrets-cms:
+        name: view-secrets-cms
+        scope:
+          cluster: true
+        rules:
+          - apiGroups:
+              - '""'
+            resources:
+              - secrets
+              - configmaps
+            verbs:
+              - "get"
+              - "list"
+              - "watch"
