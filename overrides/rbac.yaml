@@ -3,10 +3,12 @@ clusterGroup:
   rbac:
     serviceAccounts:
       testAccount:
+        disabled: true
         name: test
         namespace: default
     roleBindings:
       view-secrets-cms:
+        disabled: true
         scope:
           cluster: true
         name: view-secrets-cms
@@ -20,6 +22,7 @@ clusterGroup:
           name: view-secrets-cms
     roles:
       view-secrets-cms:
+        disabled: true
         name: view-secrets-cms
         scope:
           cluster: true
