@@ -3,5 +3,5 @@ clusterGroup:
   rbac:
     serviceAccounts:
       testAccount:
-        - name: test
-          namespace: default
+        name: test
+        namespace: default
