@@ -8,7 +8,9 @@ clusterGroup:
         namespace: default
     roleBindings:
       view-secrets-cms:
-        diabled: true
+        disabled: true
+        scope:
+          cluster: true
     roles:
       view-secrets-cms:
         disabled: true
