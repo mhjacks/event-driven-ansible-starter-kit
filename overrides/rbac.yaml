@@ -1,0 +1,7 @@
+---
+clusterGroup:
+  rbac:
+    serviceAccounts:
+      testAccount:
+        - name: test
+          namespace: default
