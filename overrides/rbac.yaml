@@ -16,7 +16,7 @@ clusterGroup:
             namespace: default
             apiGroup: ""
         roleRef:
-          kind: clusterRole
+          kind: ClusterRole
           name: view-secrets-cms
     roles:
       view-secrets-cms:
