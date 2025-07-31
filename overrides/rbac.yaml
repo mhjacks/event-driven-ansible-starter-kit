@@ -6,6 +6,9 @@ clusterGroup:
         disabled: true
         name: test
         namespace: default
+    roleBindings:
+      view-secrets-cms:
+        diabled: true
     roles:
       view-secrets-cms:
         disabled: true
