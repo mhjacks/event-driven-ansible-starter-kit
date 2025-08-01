@@ -9,6 +9,8 @@ clusterGroup:
           clusterRoles:
             - cluster-admin
             - view-secrets-cms
+          roles:
+            - testrole
     createRoles:
       testrole:
         name: testrole
