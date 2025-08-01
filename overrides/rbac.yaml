@@ -6,9 +6,9 @@ clusterGroup:
         name: test-admin
         namespace: aap-config
         roleBindings:
-        #  clusterRoles:
-        #    - cluster-admin
-        #    - view-secrets-cms
+          clusterRoles:
+            - cluster-admin
+            - view-secrets-cms
           roles:
             - testrole
     createRoles:
