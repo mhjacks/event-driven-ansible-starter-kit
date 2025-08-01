@@ -3,29 +3,15 @@ clusterGroup:
   rbac:
     serviceAccounts:
       testAccount:
-        disabled: true
-        name: test
+        name: test-admin
         namespace: default
-    roleBindings:
+        roleBindings:
+          clusterRoles:
+            - cluster-admin
+            - view-secrets-cms
+    createClusterRoles:
       view-secrets-cms:
-        disabled: true
-        scope:
-          cluster: true
         name: view-secrets-cms
-        subjects:
-          - kind: ServiceAccount
-            name: test
-            namespace: default
-            apiGroup: ""
-        roleRef:
-          kind: ClusterRole
-          name: view-secrets-cms
-    roles:
-      view-secrets-cms:
-        disabled: true
-        name: view-secrets-cms
-        scope:
-          cluster: true
         rules:
           - apiGroups:
               - '""'
