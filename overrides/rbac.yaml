@@ -11,7 +11,6 @@ vp-rbac:
           - testrole
   createRoles:
     testrole:
-      name: testrole
       namespace: aap-config
       rules:
         - apiGroups:
@@ -23,7 +22,6 @@ vp-rbac:
             - "watch"
   createClusterRoles:
     view-secrets-cms:
-      name: view-secrets-cms
       rules:
         - apiGroups:
             - '""'
