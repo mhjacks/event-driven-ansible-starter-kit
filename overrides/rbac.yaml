@@ -1,37 +1,36 @@
 ---
 vp-rbac:
-  rbac:
-    serviceAccounts:
-      test-admin:
-        namespace: aap-config
-        roleBindings:
-          clusterRoles:
-            - cluster-admin
-            - view-secrets-cms
-          roles:
-            - testrole
-    createRoles:
-      testrole:
-        name: testrole
-        namespace: aap-config
-        rules:
-          - apiGroups:
-              - '""'
-            resources:
-              - configmaps
-            verbs:
-              - "list"
-              - "watch"
-    createClusterRoles:
-      view-secrets-cms:
-        name: view-secrets-cms
-        rules:
-          - apiGroups:
-              - '""'
-            resources:
-              - secrets
-              - configmaps
-            verbs:
-              - "get"
-              - "list"
-              - "watch"
+  serviceAccounts:
+    test-admin:
+      namespace: aap-config
+      roleBindings:
+        clusterRoles:
+          - cluster-admin
+          - view-secrets-cms
+        roles:
+          - testrole
+  createRoles:
+    testrole:
+      name: testrole
+      namespace: aap-config
+      rules:
+        - apiGroups:
+            - '""'
+          resources:
+            - configmaps
+          verbs:
+            - "list"
+            - "watch"
+  createClusterRoles:
+    view-secrets-cms:
+      name: view-secrets-cms
+      rules:
+        - apiGroups:
+            - '""'
+          resources:
+            - secrets
+            - configmaps
+          verbs:
+            - "get"
+            - "list"
+            - "watch"
