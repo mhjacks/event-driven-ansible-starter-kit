@@ -1,22 +1,16 @@
 ---
 clusterGroup:
   subscriptions:
-    node-health-check:
-      name: node-healthcheck-operator
-      namespace: openshift-workload-availability
-      channels: [ "stable" ]
-      serviceAccountName: workload-sa
-
-    self-node-remediation:
-      name: self-node-remediation
-      namespace: openshift-workload-availability
-      channels: [ "stable" ]
-      serviceAccountName: workload-sa
+    quay-operator:
+      name: quay-operator
+      namespace: redhat-quay
+      channels: [ "stable-3.12" ]
+      serviceAccountName: quay-sa
 
 vp-rbac:
   serviceAccounts:
-    workload-sa:
-      namespace: openshift-workload-availability
+    quay-sa:
+      namespace: redhat-quay
       roleBindings:
         clusterRoles:
           - cluster-admin

@@ -6,9 +6,7 @@ clusterGroup:
     - golang-external-secrets
     - ansible-automation-platform
     - aap-config
-    - openshift-workload-availability:
-        operatorGroup: true
-        targetNamespaces:
+    - redhat-quay
   subscriptions:
     aap-operator:
       name: ansible-automation-platform-operator
