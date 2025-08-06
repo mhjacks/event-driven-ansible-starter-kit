@@ -6,7 +6,14 @@ clusterGroup:
     - golang-external-secrets
     - ansible-automation-platform
     - aap-config
+    - web-terminal
   subscriptions:
+    web-terminal:
+      name: web-terminal
+      namespace: web-terminal
+      channels:
+        - fast
+      serviceAccountName: web-terminal-sa
     aap-operator:
       name: ansible-automation-platform-operator
       namespace: ansible-automation-platform

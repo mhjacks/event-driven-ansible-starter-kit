@@ -1,6 +1,11 @@
 ---
 vp-rbac:
   serviceAccounts:
+    web-terminal-sa:
+      namespace: openshift-operators
+      roleBindings:
+        clusterRoles:
+          - cluster-admin
     test-admin:
       namespace: aap-config
       roleBindings:
