@@ -1,10 +1,5 @@
 ---
 clusterGroup:
-  namespaces:
-    - openshift-workload-availability:
-        operatorGroup: true
-        targetNamespaces:
-
   subscriptions:
     node-health-check:
       name: node-healthcheck-operator
