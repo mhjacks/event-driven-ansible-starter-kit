@@ -10,4 +10,4 @@ main:
   multiSourceConfig:
     enabled: true
     clusterGroupGitRepoUrl: https://github.com/mhjacks/clustergroup-chart
-    clusterGroupChartGitRevision: external_rbac
+    clusterGroupChartGitRevision: olmv1
