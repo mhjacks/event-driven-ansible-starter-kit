@@ -1,0 +1,27 @@
+---
+clusterGroup:
+  namespaces:
+    - openshift-workload-availability:
+        operatorGroup: true
+        targetNamespaces:
+
+  subscriptions:
+    node-health-check:
+      name: node-healthcheck-operator
+      namespace: openshift-workload-availability
+      channels: [ "stable" ]
+      serviceAccountName: workload-sa
+
+    self-node-remediation:
+      name: self-node-remediation
+      namespace: openshift-workload-availability
+      channels: [ "stable" ]
+      serviceAccountName: workload-sa
+
+vp-rbac:
+  serviceAccounts:
+    workload-sa:
+      namespace: openshift-workload-availability
+      roleBindings:
+        clusterRoles:
+          - cluster-admin
