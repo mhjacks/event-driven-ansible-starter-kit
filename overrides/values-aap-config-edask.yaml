@@ -1,6 +1,6 @@
 ---
 agof:
-  extraPlaybookOpts: '-vvv'
+  extraPlaybookOpts: '-vvv -e perform_pre_config_fixups=false'
   iac_repo: https://github.com/validatedpatterns-demos/eda-starter-kit-config-as-code.git
   iac_revision: main
 
